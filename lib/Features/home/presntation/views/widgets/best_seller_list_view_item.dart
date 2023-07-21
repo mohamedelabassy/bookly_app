@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../../constants.dart';
 import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/style.dart';
+import 'booking_rating.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({super.key});
@@ -31,38 +32,43 @@ class BestSellerListViewItem extends StatelessWidget {
           const SizedBox(
             width: 30,
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                width: MediaQuery.of(context).size.width * .5,
-                child: Text(
-                  'Harry Potter and the Goblet of Fire ',
-                  style: Style.textStyle20.copyWith(fontFamily: kGtSectraFine),
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-              const SizedBox(
-                height: 3,
-              ),
-              const Text(
-                'j.k.Rowling',
-                style: Style.textStyle14,
-              ),
-              const SizedBox(
-                height: 3,
-              ),
-              Row(
-                children: [
-                  Text(
-                    '19.99 £ ',
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * .5,
+                  child: Text(
+                    'Harry Potter and the Goblet of Fire ',
                     style:
-                        Style.textStyle20.copyWith(fontWeight: FontWeight.bold),
-                  )
-                ],
-              )
-            ],
+                        Style.textStyle20.copyWith(fontFamily: kGtSectraFine),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+                const SizedBox(
+                  height: 3,
+                ),
+                const Text(
+                  'j.k.Rowling',
+                  style: Style.textStyle14,
+                ),
+                const SizedBox(
+                  height: 3,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      '19.99 £ ',
+                      style: Style.textStyle20
+                          .copyWith(fontWeight: FontWeight.bold),
+                    ),
+                    const Spacer(),
+                    const BookRating()
+                  ],
+                )
+              ],
+            ),
           )
         ],
       ),
