@@ -1,6 +1,5 @@
 import 'package:bookly_app/core/utils/style.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import 'Custom_App_bar.dart';
 import 'Fetured_list_view.dart';
