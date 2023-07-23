@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'Custom_App_bar.dart';
 import 'Fetured_list_view.dart';
 import 'best_seller_list_view.dart';
-import 'best_seller_list_view_item.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
