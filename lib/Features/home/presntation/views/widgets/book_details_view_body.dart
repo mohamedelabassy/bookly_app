@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'CustomBookImage.dart';
 import 'custom_book_detatils_appbar.dart';
+import 'smiliar_books_list_view.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
@@ -23,14 +24,14 @@ class BookDetailsViewBody extends StatelessWidget {
             child: const CustomBookImage(),
           ),
           const SizedBox(
-            height: 43,
+            height: 30,
           ),
           Text(
             'The jungle Book ',
             style: Style.textStyle30.copyWith(fontWeight: FontWeight.bold),
           ),
           const SizedBox(
-            height: 6,
+            height: 5,
           ),
           Opacity(
             opacity: .7,
@@ -43,15 +44,32 @@ class BookDetailsViewBody extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 16,
+            height: 12,
           ),
           const BookRating(
             mainAxisAlignment: MainAxisAlignment.center,
           ),
           const SizedBox(
-            height: 36,
+            height: 20,
           ),
-          const BookAction()
+          const BookAction(),
+          const SizedBox(
+            height: 20,
+          ),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'You Can Also Like ',
+              style: Style.textStyle16.copyWith(fontWeight: FontWeight.w600),
+            ),
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          const SmiliarBooksListView(),
+          const SizedBox(
+            height: 40,
+          ),
         ],
       ),
     );
